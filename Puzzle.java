@@ -11,7 +11,7 @@ public class Puzzle
 
 
     public Puzzle(){
-        word = "daniel";
+        word = "skrrt";
         s = "";
         for(int i = 0; i<word.length(); i++){
             s+="_";
@@ -24,6 +24,7 @@ public class Puzzle
     }
 
     public boolean makeGuess(String letter){
+        if(letter.length()!=word.length() && letter.length()!=1) return true;
         letter = letter.toLowerCase();
         if(wrongs.contains(letter)){
             return true;
